@@ -1,0 +1,190 @@
+/* ESTILOS COMUNS A TODAS AS PÁGINAS */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f4f4f4; 
+    color: #333; 
+}
+nav { 
+    background-color: #3b82f6; 
+    padding: 10px 0; 
+}
+nav ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    text-align: center; 
+}
+nav ul li { 
+    display: inline; 
+    margin: 0 15px; 
+}
+nav ul li a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+h1 { 
+    color: #ffffff; 
+    text-align: center; 
+}
+img { 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    margin-top: 15px; 
+}
+main { 
+    margin: 20px auto; 
+    padding: 20px; 
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+}
+
+/* ESTILOS ESPECÍFICOS POR PÁGINA (HEADERS, FOOTERS, MAIN WIDTH) */
+
+/* Index.html */
+.header-index { 
+    background-color: #0044ff; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+}
+.footer-index { 
+    background-color: #3b82f6; 
+    color: white; 
+    text-align: center; 
+    padding: 15px; 
+    margin-top: 30px; 
+    font-size: 0.9em; 
+}
+.contact-info { 
+    margin-top: 20px; 
+    padding: 15px; 
+    background-color: #3b82f6; 
+    border-radius: 6px; 
+}
+.contact-info address .contact-link { 
+    color: #003bfd; 
+    text-decoration: none;
+}
+.header-index + nav + main {
+    max-width: 900px; 
+}
+.header-index + nav + main h2 { 
+    border-bottom: 2px solid #333; 
+    padding-bottom: 5px; 
+    margin-top: 30px; 
+    color: #333; 
+}
+
+/* Projetos.html & Cadastro.html */
+.header-projetos, .header-cadastro {
+    background-color: #1e40af; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+}
+.footer-projetos, .footer-cadastro {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 15px; 
+    margin-top: 30px; 
+    font-size: 0.9em; 
+}
+
+/* Estilos de Projetos.html */
+.header-projetos + nav + main {
+    max-width: 900px; 
+}
+.h2-projetos { 
+    border-bottom: 2px solid #facc15; 
+    padding-bottom: 5px; 
+    margin-top: 30px; 
+    color: #1e40af; 
+}
+.h3-projetos { 
+    color: #ef4444; 
+    margin-top: 15px; 
+}
+.project-item { 
+    border: 1px solid #ddd; 
+    padding: 15px; 
+    margin-bottom: 20px; 
+    border-radius: 6px; 
+}
+.donation-box { 
+    background-color: #ffeeda; 
+    padding: 15px; 
+    border-left: 5px solid #facc15; 
+    margin-top: 15px; 
+}
+.link-cadastro-projetos { 
+    color: #ef4444; 
+    font-weight: bold;
+}
+
+
+/* Estilos de Cadastro.html (Formulário) */
+.main-cadastro {
+    max-width: 700px; 
+}
+.figure-cadastro {
+    text-align: center;
+}
+.img-cadastro {
+    max-width: 400px; 
+    display: inline-block; 
+    margin-bottom: 15px;
+}
+form label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+form input[type="text"], form input[type="email"], form input[type="tel"], 
+form input[type="date"], form select {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+}
+fieldset { 
+    border: 2px solid #ccc; 
+    padding: 20px; 
+    margin-bottom: 30px; 
+    border-radius: 6px; 
+}
+legend { 
+    font-size: 1.2em; 
+    font-weight: bold; 
+    color: #ef4444; 
+    padding: 0 10px; 
+}
+button[type="submit"] { 
+    background-color: #ef4444; 
+    color: white; 
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 1.1em; 
+    width: 100%; 
+}
+button[type="submit"]:hover { 
+    background-color: #cc3333; 
+}
+.success-message { 
+    padding: 15px; 
+    background-color: #d4edda; 
+    color: #155724; 
+    border: 1px solid #c3e6cb; 
+    border-radius: 4px; 
+    margin-top: 20px; 
+    text-align: center; 
+}
