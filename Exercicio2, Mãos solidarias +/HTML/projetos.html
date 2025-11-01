@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Sociais - Mãos Solidárias</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <div class="grid-container">
+        <header>
+            <h1>Projetos Sociais e Oportunidades de Apoio</h1>
+        </header>
+
+        <nav aria-label="Navegação Principal">
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir Menu">
+                &#9776; 
+            </button>
+
+            <ul class="nav-list" id="main-menu">
+                <li><a href="index.html">Início</a></li>
+                <li class="has-dropdown">
+                    <a href="projetos.html">Projetos Sociais</a>
+                    <ul class="dropdown-menu"> 
+                        <li><a href="#voluntariado">Voluntariado</a></li>
+                        <li><a href="#doacoes">Doações</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Áreas de Atuação</h2>
+                
+                <div class="projects-flex-container">
+                    
+                    <article class="project-card" id="voluntariado">
+                        <h3 class="h3-projetos">Seja um Voluntário Solidário</h3>
+                        <div class="badge-list">
+                            <span class="badge info">Ação Contínua</span>
+                            <span class="badge danger">Urgente</span>
+                        </div>
+                        <p>O voluntariado é a força vital da nossa organização. Venha dedicar seu tempo e talento para quem mais precisa.</p>
+                        <p><strong>Onde Ajudar:</strong></p>
+                        <ul>
+                            <li>Distribuição de alimentos .</li>
+                            <li>Apoio escolar para crianças.</li>
+                            <li>Mutirões de reforma e limpeza.</li>
+                        </ul>
+                        <a href="../cadastro.html" class="btn">Cadastre-se Agora!</a>
+                        <figure>
+                            <img src="../assets/maos.cozinha.png" alt="Voluntários em ação na cozinha.">
+                            <figcaption>Voluntários são essenciais para o sucesso dos nossos projetos.</figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="project-card" id="doacoes">
+                         <h3 class="h3-projetos">Doação em Dinheiro</h3>
+                         <div class="badge-list">
+                            <span class="badge success">Impacto Alto</span>
+                        </div>
+                        <p>Sua contribuição permite a compra de itens perecíveis, medicamentos e custeio logístico.</p>
+                        
+                        <div class="donation-box">
+                            <h4>PIX para Doação</h4>
+                            <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+                        </div>
+                        
+                        <a href="#" class="btn" style="width: 100%; margin-top: var(--space-sm);">Doar Online</a>
+                        <figure>
+                            <img src="../assets/maos.arrecadacao.png" alt="Voluntários arrecadando fundos para mais projetos.">
+                            <figcaption>Qualquer ajuda é bem vinda para quem precisa.</figcaption>
+                        </figure>
+                    </article>
+                    
+                    <article class="project-card">
+                         <h3 class="h3-projetos">Doação de Itens</h3>
+                         <div class="badge-list">
+                            <span class="badge info">Material</span>
+                        </div>
+                        <p>Aceitamos alimentos não perecíveis, roupas (em bom estado) e kits de higiene pessoal.</p>
+                        
+                        <div class="donation-box">
+                            <h4>Ponto de Coleta</h4>
+                            <p>Entregue em: Rua da Esperança, 999 - Centro.</p>
+                        </div>
+                        <button class="btn" disabled>Agendar Retirada</button>
+                         <figure>
+                            <img src="../assets/maos.doacao.png" alt="Voluntários arrecadando doações para mais projetos.">
+                            <figcaption>Toda ajuda importa.</figcaption>
+                        </figure>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Mãos Solidárias. Juntos pela solidariedade.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Lógica de Navegação (Menu Mobile e Dropdown)
+        const dropdown = document.querySelector('.has-dropdown');
+        const submenu = document.querySelector('.dropdown-menu');
+
+        if (dropdown && submenu) {
+            dropdown.addEventListener('mouseenter', () => {
+                // Garante que só mostre o dropdown em telas maiores que mobile (desktop)
+                if (window.innerWidth >= 769) {
+                    submenu.style.display = 'block';
+                }
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                if (window.innerWidth >= 769) {
+                    submenu.style.display = 'none';
+                }
+            });
+        }
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.getElementById('main-menu');
+        
+        if (menuToggle && navList) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                navList.classList.toggle('open');
+            });
+        }
+    </script>
+
+</body>
+</html>
