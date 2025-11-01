@@ -1,0 +1,389 @@
+/* Design System - Variáveis CSS (Consolidado) */
+
+:root {
+    /* Cores */
+    --color-primary-dark: #1e40af; 
+    --color-primary-base: #3b82f6; 
+    --color-secondary-dark: #b45309; 
+    --color-secondary-base: #facc15; 
+    --color-danger: #ef4444; 
+    --color-danger-hover: #cc3333;
+    --color-white: #ffffff;
+    --color-neutral-light: #f4f4f4;
+    --color-neutral-dark: #333;
+    
+    /* Cores de Feedback (Cadastro) */
+    --color-feedback-success: #d4edda; 
+    --color-feedback-success-text: #155724;
+    --color-feedback-error: #f8d7da; 
+    --color-feedback-error-text: #721c24;
+    
+    /* Cores de Projetos (Badges) */
+    --color-success: #15803d; 
+    --color-info: #075985; 
+
+    /* Tipografia */
+    --font-family-base: Arial, sans-serif;
+    --font-size-xl: 2.5rem; 
+    --font-size-lg: 1.5rem; 
+    --font-size-md: 1.25rem; 
+    --font-size-base: 1rem; 
+    --font-size-sm: 0.875rem; 
+
+    /* Espaçamento Modular (8px base) */
+    --space-xs: 0.5rem;   
+    --space-sm: 1rem;     
+    --space-md: 1.5rem;   
+    --space-lg: 2rem;     
+    --space-xl: 3rem;     
+    --space-xxl: 4rem;    
+}
+
+/* Reset e Base (Aplicado a todas as páginas) */
+
+* { box-sizing: border-box; }
+body { 
+    font-family: var(--font-family-base); 
+    margin: 0; 
+    padding: 0; 
+    background-color: var(--color-neutral-light); 
+    color: var(--color-neutral-dark);
+    font-size: var(--font-size-base);
+}
+
+h1 { font-size: var(--font-size-xl); margin-top: 0; }
+h2 { font-size: var(--font-size-lg); margin-top: var(--space-lg); color: var(--color-primary-dark); } 
+h3 { font-size: var(--font-size-md); margin-top: var(--space-md); } 
+figcaption, footer p { font-size: var(--font-size-sm); }
+
+a { color: var(--color-primary-base); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    margin: var(--space-sm) 0 var(--space-md) 0; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Leiaute Principal com Grid */
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header" 
+        "nav"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+
+header { grid-area: header; background-color: var(--color-primary-dark); color: var(--color-white); padding: var(--space-lg); text-align: center; }
+nav { grid-area: nav; background-color: var(--color-primary-base); padding: var(--space-sm) 0; }
+main { 
+    grid-area: main; 
+    max-width: 1200px; 
+    width: 100%; 
+    margin: var(--space-lg) auto; 
+    padding: var(--space-md); 
+    background-color: var(--color-white); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+footer { grid-area: footer; background-color: var(--color-primary-dark); color: var(--color-white); text-align: center; padding: var(--space-md); margin-top: auto; }
+
+/* Navegação (Comum e Responsiva) */
+
+.nav-list { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+}
+.nav-list > li { 
+    margin: 0 var(--space-sm); 
+    position: relative;
+}
+.nav-list a { 
+    color: var(--color-white); 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: var(--space-xs) var(--space-sm);
+    display: block;
+    transition: background-color 0.3s;
+}
+.nav-list a:hover { 
+    background-color: var(--color-primary-dark); 
+    text-decoration: none;
+}
+.menu-toggle { 
+    display: none; 
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    padding: var(--space-xs);
+}
+
+/* Estilos de Dropdown (Projetos.html) */
+.nav-list .dropdown-menu {
+    position: absolute; 
+    background-color: var(--color-primary-dark); 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    min-width: 150px; 
+    display: none;
+    z-index: 10;
+}
+.nav-list .dropdown-menu a {
+    padding: var(--space-xs) var(--space-sm); 
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+.has-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilos Específicos da Página Index.html (Grid Interno) */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-md);
+    align-items: start;
+}
+.quem-somos {
+    grid-column: 1 / span 12; 
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--color-secondary-base);
+}
+.contact-info {
+    grid-column: 1 / span 12; 
+    padding: var(--space-md); 
+    background-color: var(--color-neutral-light);
+    border: 1px solid var(--color-primary-base);
+    border-radius: 6px;
+}
+/* Estilo inline para o link de contato na index */
+.contact-info address a { 
+    color: var(--color-primary-dark); 
+    text-decoration: underline;
+}
+
+/* Estilos Específicos da Página Projetos.html */
+
+.h2-projetos {
+    border-bottom: 2px solid var(--color-secondary-base); 
+    padding-bottom: var(--space-xs);
+    color: var(--color-primary-dark);
+}
+.h3-projetos {
+    color: var(--color-danger);
+}
+.projects-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+.project-card { 
+    flex: 1 1 100%; 
+    border: 1px solid #ddd; 
+    padding: var(--space-md); 
+    border-radius: 6px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background-color: var(--color-white);
+    transition: transform 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.donation-box { 
+    background-color: var(--color-neutral-light); 
+    padding: var(--space-sm); 
+    border-left: 5px solid var(--color-secondary-base); 
+    margin-top: var(--space-sm); 
+    border-radius: 4px;
+}
+
+/* Badges */
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin: var(--space-sm) 0;
+}
+.badge {
+    font-size: var(--font-size-sm);
+    padding: 4px 8px; 
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+.badge.success { background-color: var(--color-success); }
+.badge.info { background-color: var(--color-info); }
+.badge.danger { background-color: var(--color-danger); }
+
+/* Projetos e Cadastro */
+.btn, .btn-submit { 
+    background-color: var(--color-danger); 
+    color: var(--color-white); 
+    padding: var(--space-xs) var(--space-sm); 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    display: inline-block;
+    text-align: center;
+}
+.btn:hover, .btn-submit:hover { background-color: var(--color-danger-hover); text-decoration: none; }
+.btn:focus { outline: 3px solid var(--color-secondary-base); }
+.btn:active, .btn-submit:active { transform: scale(0.99); background-color: var(--color-secondary-dark); }
+.btn:disabled { background-color: #ccc; cursor: not-allowed; }
+
+/* Estilo para botão de submit com largura total */
+.btn-submit { 
+    font-size: var(--font-size-md); 
+    width: 100%;
+    padding: var(--space-sm) var(--space-lg); 
+}
+
+/* Estilos Específicos da Página Cadastro.html (Formulário) */
+.main-cadastro {
+    max-width: 800px; 
+}
+fieldset { border: 2px solid var(--color-primary-base); padding: var(--space-md); margin-bottom: var(--space-lg); border-radius: 6px; }
+legend { font-size: var(--font-size-md); font-weight: bold; color: var(--color-danger); padding: 0 var(--space-xs); }
+
+form label { display: block; margin-bottom: 5px; font-weight: bold; font-size: var(--font-size-sm); color: var(--color-neutral-dark); }
+form input:not([type="checkbox"]):not([type="radio"]), form select {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: var(--space-sm); 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+    font-size: var(--font-size-base);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Validação Visual */
+form input:valid { border-color: #4CAF50; } 
+form input:invalid:not(:focus):not(:placeholder-shown) { border-color: var(--color-danger); box-shadow: 0 0 5px rgba(239, 68, 68, 0.2); }
+form input:focus { border-color: var(--color-primary-base); box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); outline: none; }
+
+/* Componente de Feedback - Toast Message (Alert) */
+.toast-message { 
+    padding: var(--space-sm); 
+    border: 1px solid transparent; 
+    border-radius: 4px; 
+    margin-top: var(--space-md); 
+    text-align: center; 
+    font-weight: bold;
+    display: none; 
+}
+.toast-message.success { 
+    background-color: var(--color-feedback-success); 
+    color: var(--color-feedback-success-text); 
+    border-color: #c3e6cb;
+}
+.toast-message.error { 
+    background-color: var(--color-feedback-error); 
+    color: var(--color-feedback-error-text); 
+    border-color: #f5c6cb; 
+}
+.figure-cadastro {
+    text-align: center;
+}
+.img-cadastro {
+    max-width: 400px; 
+    display: inline-block;
+}
+
+/* Flexbox para Agrupamento de Campos (Cadastro) */
+.form-row {
+    display: flex;
+    flex-direction: column; 
+    gap: var(--space-sm);
+}
+.form-row > div {
+    flex: 1 1 100%; 
+}
+
+/* Breakpoints Responsivos */
+
+/* 1. Tablet (600px) */
+@media (min-width: 600px) {
+    /* Index */
+    .quem-somos { grid-column: 1 / span 7; } 
+    .contact-info { grid-column: 8 / span 5; } 
+    
+    /* Projetos */
+    .project-card { 
+        flex: 1 1 calc(50% - var(--space-md) / 2); 
+    }
+    
+    /* Cadastro */
+    .form-row { flex-direction: row; }
+    .form-row-cep-address > div:first-child { flex: 1; } 
+    .form-row-cep-address > div:last-child { flex: 3; } 
+    .form-row-city-state > div:first-child { flex: 2; } 
+    .form-row-city-state > div:last-child { flex: 1; } 
+    
+}
+
+/* 2. Desktop Médio (900px) */
+@media (min-width: 900px) {
+    /* Index */
+    main { padding: var(--space-lg); }
+    .quem-somos { grid-column: 1 / span 8; } 
+    .contact-info { grid-column: 9 / span 4; } 
+    
+    /* Projetos */
+    .project-card { 
+        flex: 1 1 calc(33.33% - var(--space-md) * 2 / 3); 
+    }
+    .donation-box { margin-top: var(--space-lg); }
+
+    /* Cadastro */
+    .form-row-personal > div {
+        flex: 1 1 calc(50% - var(--space-sm) / 2);
+    }
+}
+
+/* 3. Desktop Grande (1200px) */
+@media (min-width: 1200px) {
+    /* Index */
+     .content-grid { gap: var(--space-lg); }
+}
+
+/* 4. Desktop Extra Grande (1400px) */
+@media (min-width: 1400px) {
+    /* Base */
+    header { padding: var(--space-xl); }
+}
+
+/* 5. Mobile Pequeno */
+@media (max-width: 400px) {
+    /* Base */
+    h1 { font-size: 2rem; }
+    main { margin: var(--space-sm) auto; padding: var(--space-sm); }
+}
+
+/* Mobile Nav Toggling */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; margin: 0 auto; }
+    .nav-list { flex-direction: column; display: none; background-color: var(--color-primary-base); }
+    .nav-list a { text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+    .nav-list.open { display: flex; }
+    
+    /* Esconder o dropdown no mobile */
+    .has-dropdown:hover .dropdown-menu { display: none !important; } 
+    .nav-list > li { margin: 0; }
+}
