@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Mãos Solidárias - Início</title>
+    
+    <link rel="stylesheet" href="../CSS/Style.css"> 
+</head>
+<body>
+
+    <div class="grid-container">
+        
+        <header id="app-header">
+            <h1>Mãos Solidárias</h1>
+            <p id="app-subtitle">Construindo um Futuro Mais Justo</p>
+        </header>
+        <header id="app-header">
+        <h1>Mãos Solidárias</h1>
+        <p id="app-subtitle">Construindo um Futuro Mais Justo</p>
+             </header>
+
+        <div id="accessibility-settings" style="text-align: right; padding-right: 1.5rem; background-color: var(--color-neutral-light);">
+             <label for="theme-select" style="font-size: var(--font-size-sm); margin-right: 0.5rem;">Versão de Acessibilidade:</label>
+             <select id="theme-select" aria-label="Seletor de Versão de Contraste">
+                 <option value="default">Padrão</option>
+                 <option value="dark-mode">Modo Escuro</option>
+                 <option value="high-contrast">Alto Contraste</option>
+             </select>
+        </div>
+
+        <nav aria-label="Navegação Principal">
+        
+        
+
+        <nav aria-label="Navegação Principal">
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir Menu">
+                &#9776; 
+            </button>
+
+            <ul class="nav-list" id="main-menu">
+                <li><a href="#inicio" data-target="inicio">Início</a></li>
+                <li class="has-dropdown">
+                    <a href="#projetos" data-target="projetos">Projetos Sociais</a>
+                    <ul class="dropdown-menu"> 
+                        <li><a href="#projetos-voluntariado">Voluntariado</a></li>
+                        <li><a href="#projetos-doacoes">Doações</a></li>
+                    </ul>
+                </li>
+                <li><a href="#cadastro" data-target="cadastro">Cadastro</a></li>
+            </ul>
+        </nav>
+
+        <main id="app-main">
+            <section id="inicio" class="content-section active">
+                <div class="content-grid">
+                    <section class="quem-somos">
+                        <h2>Quem Somos</h2>
+                        <p>A Mãos Solidárias é uma organização dedicada a mobilizar recursos, alimentos e apoio humanitário para comunidades carentes. Nossa missão é oferecer dignidade e combater a fome e a desigualdade social em nossa região.</p>
+
+                        <figure>
+                            <img src="../assets/maos.cestas.png" alt="Comunidade recebendo assistência da Mãos Solidárias.">
+                            <figcaption>Comunidade recebendo assistência da Mãos Solidárias.</figcaption>
+                        </figure>
+                    </section>
+
+                    <section class="contact-info">
+                        <h2>Entre em Contato</h2>
+                        <address style="font-size: var(--font-size-sm);"> 
+                            <strong>Localização:</strong> Rua da Esperança, 999 - Centro, Cidade Solidária, CS.<br>
+                            <strong>Telefone:</strong> (99) 99999-9999<br>
+                            <strong>Email:</strong> <a href="mailto:contato@maossolidarias.org">contato@maossolidarias.org</a> 
+                        </address>
+                    </section>
+                </div>
+            </section>
+
+            <section id="projetos" class="content-section">
+                <header>
+                    <h1 style="color: var(--color-primary-dark); text-align: left; margin-bottom: var(--space-lg);">Projetos Sociais e Oportunidades de Apoio</h1>
+                </header>
+                
+                <h2>Áreas de Atuação</h2>
+                
+                <div class="projects-flex-container">
+                    
+                    <article class="project-card" id="projetos-voluntariado">
+                        <h3 class="h3-projetos">Seja um Voluntário Solidário</h3>
+                        <div class="badge-list">
+                            <span class="badge info">Ação Contínua</span>
+                            <span class="badge danger">Urgente</span>
+                        </div>
+                        <p>O voluntariado é a força vital da nossa organização. Venha dedicar seu tempo e talento para quem mais precisa.</p>
+                        <p><strong>Onde Ajudar:</strong></p>
+                        <ul>
+                            <li>Distribuição de alimentos .</li>
+                            <li>Apoio escolar para crianças.</li>
+                            <li>Mutirões de reforma e limpeza.</li>
+                        </ul>
+                        <a href="#cadastro" data-target="cadastro" class="btn">Cadastre-se Agora!</a>
+                        <figure>
+                            <img src="../assets/maos.cozinha.png" alt="Voluntários em ação na cozinha.">
+                            <figcaption>Voluntários são essenciais para o sucesso dos nossos projetos.</figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="project-card" id="projetos-doacoes">
+                         <h3 class="h3-projetos">Doação em Dinheiro</h3>
+                         <div class="badge-list">
+                            <span class="badge success">Impacto Alto</span>
+                        </div>
+                        <p>Sua contribuição permite a compra de itens perecíveis, medicamentos e custeio logístico.</p>
+                        
+                        <div class="donation-box">
+                            <h4>PIX para Doação</h4>
+                            <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+                        </div>
+                        
+                        <a href="#" class="btn" style="width: 100%; margin-top: var(--space-sm);">Doar Online</a>
+                        <figure>
+                            <img src="../assets/maos.arrecadacao.png" alt="Voluntários arrecadando fundos para mais projetos.">
+                            <figcaption>Qualquer ajuda é bem vinda para quem precisa.</figcaption>
+                        </figure>
+                    </article>
+                    
+                    <article class="project-card">
+                         <h3 class="h3-projetos">Doação de Itens</h3>
+                         <div class="badge-list">
+                            <span class="badge info">Material</span>
+                        </div>
+                        <p>Aceitamos alimentos não perecíveis, roupas (em bom estado) e kits de higiene pessoal.</p>
+                        
+                        <div class="donation-box">
+                            <h4>Ponto de Coleta</h4>
+                            <p>Entregue em: Rua da Esperança, 999 - Centro.</p>
+                        </div>
+                        <button class="btn" disabled>Agendar Retirada</button>
+                         <figure>
+                            <img src="../assets/maos.doacao.png" alt="Voluntários arrecadando doações para mais projetos.">
+                            <figcaption>Toda ajuda importa.</figcaption>
+                        </figure>
+                    </article>
+                </div>
+            </section>
+
+            <section id="cadastro" class="content-section main-cadastro">
+                <header>
+                    <h1 style="color: var(--color-primary-dark); text-align: center; margin-bottom: var(--space-lg);">Formulário de Voluntariado e Apoio</h1>
+                </header>
+
+                <figure class="figure-cadastro">
+                    <img src="../assets/Junteseanos.png" alt="Junte-se a nós" class="img-cadastro">
+                    <figcaption>Preencha o formulário e faça parte da nossa rede de solidariedade.</figcaption>
+                </figure>
+
+                <form id="cadastro-form">
+
+                    <fieldset>
+                        <legend>1. Dados Pessoais</legend>
+
+                        <div class="form-row form-row-personal">
+                            <div>
+                                <label for="nome-completo">Nome Completo</label>
+                                <input type="text" id="nome-completo" name="nome-completo" placeholder="Seu nome completo" required minlength="5">
+                            </div>
+                            <div>
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row form-row-personal">
+                            <div>
+                                <label for="cpf">CPF</label>
+                                <input type="text" id="cpf" name="cpf" placeholder="999.999.999-99" required maxlength="14" onkeyup="maskCPF(this)" 
+                                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 999.999.999-99">
+                            </div>
+                            <div>
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required maxlength="15" onkeyup="maskPhone(this)">
+                            </div>
+                        </div>
+                        
+                        <label for="data-nascimento">Data de Nascimento</label>
+                        <input type="date" id="data-nascimento" name="data-nascimento" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>2. Endereço</legend>
+                        
+                        <div class="form-row form-row-cep-address">
+                            <div>
+                                <label for="cep">CEP</label>
+                                <input type="text" id="cep" name="cep" placeholder="99999-999" required maxlength="9" onkeyup="maskCEP(this)"
+                                    pattern="\d{5}-\d{3}" title="Formato: 99999-999">
+                            </div>
+                            <div>
+                                <label for="endereco">Endereço (Rua, Av. e Número)</label>
+                                <input type="text" id="endereco" name="endereco" placeholder="Rua da Ação, 456" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row form-row-city-state">
+                            <div>
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="Sua Cidade" required>
+                            </div>
+                            <div>
+                                <label for="estado">Estado</label>
+                                <input type="text" id="estado" name="estado" placeholder="Seu Estado" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn-submit">Finalizar Cadastro</button>
+                    <div id="form-message" class="toast-message"></div>
+                </form>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Mãos Solidárias. SPA Básico com Design System e HTML5 Semântico.</p>
+        </footer>
+    </div>
+
+    <script src="../JS/Script.js"></script>
+
+</body>
+</html>
